@@ -6,17 +6,16 @@ import com.embevolter.logtool.model.LogLine;
 
 /**
  * Logtool launcher
+ * Instantiates a Logtool implementation and launches the read and write processors
+ * @param args The arguments of the program.
  */
 public final class Logtool {
     private Logtool() {
     }
 
-    /**
-     * Run the Logtool.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
 
+        //input filename is read as an argument from the command line jar
         if( args.length != 1 ) {
             throw new IllegalArgumentException("Invalid number of arguments! /n Logtool Usage: java -jar Logtool 'file'");
         }
