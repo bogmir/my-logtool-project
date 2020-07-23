@@ -1,0 +1,1377 @@
+[ {
+  "host" : "chip-spe.m.eunet.de",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 7,
+    "minute" : 12,
+    "second" : 20
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "gumpo/gumpo/gif/reinvent_smaller.gif"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "isis.msstate.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 8,
+    "minute" : 39,
+    "second" : 54
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "docs/GCDOAR/landfill.html"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "10788"
+}, {
+  "host" : "sandy.rtptok1.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 10,
+    "minute" : 48,
+    "second" : 24
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "OWOW/PubList/"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "sandy.rtptok1.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 10,
+    "minute" : 48,
+    "second" : 38
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "OWOW/PubList/"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "sandy.rtptok1.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 10,
+    "minute" : 49,
+    "second" : 1
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "OWOW/PubList/"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "wingerta.mtv.gtegsc.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 11,
+    "minute" : 4,
+    "second" : 30
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4889"
+}, {
+  "host" : "wingerta.mtv.gtegsc.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 11,
+    "minute" : 5,
+    "second" : 59
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4889"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 33
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4888"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 34
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/circle_logo_small.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2624"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 36
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/small_gopher.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "935"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 37
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/small_ftp.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "124"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 39
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/book.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "156"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 40
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/us-flag.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2788"
+}, {
+  "host" : "129.93.226.71",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 13,
+    "minute" : 37,
+    "second" : 41
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/ok2-0.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "231"
+}, {
+  "host" : "wingerta.mtv.gtegsc.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 14,
+    "minute" : 14,
+    "second" : 5
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4888"
+}, {
+  "host" : "wingerta.mtv.gtegsc.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 14,
+    "minute" : 14,
+    "second" : 55
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4888"
+}, {
+  "host" : "gw.phcteam.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 14,
+    "minute" : 51,
+    "second" : 40
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Day-15&type=HTML&docid=\u0001"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "219"
+}, {
+  "host" : "142.140.32.21",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 11,
+    "second" : 12
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Information%20on%20database%3a%20HTDOCS&type=WSRC&docid=%02%1c%2fusr1%2fcomwais%2findexes%2fHTDOCS%03%2b0%200%20%2fusr1%2fcomwais%2findexes%2fHTDOCS%2fHTDOCS%2esrc%07%01%00&seed_words_used=economics+lake+superior&byte_count=360"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "949"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 11
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4888"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 12
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "cons/circle_logo_small.gif\"",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "400",
+  "requestSize" : "-"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 13
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "cons/book.gif\"",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "400",
+  "requestSize" : "-"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 13
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "ogos/small_gopher.gif\"",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "400",
+  "requestSize" : "-"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 13
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "ogos/small_ftp.gif\"",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "400",
+  "requestSize" : "-"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 13
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "ogos/us-flag.gif\"",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "400",
+  "requestSize" : "-"
+}, {
+  "host" : "willard-ibmpc12.cac-labs.psu.edu",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 17,
+    "second" : 13
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "cons/ok2-0.gif\"",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "400",
+  "requestSize" : "-"
+}, {
+  "host" : "wingerta.mtv.gtegsc.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 45,
+    "second" : 33
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4888"
+}, {
+  "host" : "wingerta.mtv.gtegsc.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 15,
+    "minute" : 46,
+    "second" : 40
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4888"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 6,
+    "second" : 23
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 6,
+    "second" : 27
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 12,
+    "second" : 43
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 13,
+    "second" : 25
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 13,
+    "second" : 30
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 14,
+    "second" : 22
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 14,
+    "second" : 26
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar1.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 15,
+    "second" : 44
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 31,
+    "second" : 59
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 32,
+    "second" : 29
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 32,
+    "second" : 34
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 33,
+    "second" : 48
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 34,
+    "second" : 48
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 34,
+    "second" : 52
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 35,
+    "second" : 34
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 35,
+    "second" : 38
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 38,
+    "second" : 10
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 16,
+    "minute" : 38,
+    "second" : 14
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 16,
+    "second" : 58
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 17,
+    "second" : 3
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 17,
+    "second" : 9
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 17,
+    "second" : 13
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 30,
+    "second" : 0
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 30,
+    "second" : 57
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 31,
+    "second" : 51
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 31,
+    "second" : 55
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 32,
+    "second" : 4
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-R5/icon-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ar9.r5ard.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 17,
+    "minute" : 32,
+    "second" : 20
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "ARD-"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "quito.cor.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 34,
+    "second" : 25
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/book.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "156"
+}, {
+  "host" : "quito.cor.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 34,
+    "second" : 26
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/us-flag.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2788"
+}, {
+  "host" : "quito.cor.epa.gov",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 34,
+    "second" : 30
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/ok2-0.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "231"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 38,
+    "second" : 56
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4950"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 39,
+    "second" : 29
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/circle_logo_small.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2624"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 39,
+    "second" : 33
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/small_gopher.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "935"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 39,
+    "second" : 37
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/small_ftp.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "124"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 39,
+    "second" : 40
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/book.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "156"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 39,
+    "second" : 41
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/us-flag.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2788"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 39,
+    "second" : 48
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/ok2-0.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "231"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 40,
+    "second" : 10
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "docs/CSO.html"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "3223"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 40,
+    "second" : 16
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/epa.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "457"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 40,
+    "second" : 27
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "cgi-bin/phf?Qname=stoner&Jserver=www.epa.gov"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "524"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 40,
+    "second" : 52
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/epa.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "457"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 41,
+    "second" : 20
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "POST",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "cgi-bin/waisgate/134.67.99.11=earth1=210=/usr1/comwais/indexes/HTDOCS=gopher%40earth1=0.00=:free"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 41,
+    "second" : 50
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "POST",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "cgi-bin/waisgate/134.67.99.11=earth1=210=/usr1/comwais/indexes/HTDOCS=gopher%40earth1=0.00=:free"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 42,
+    "second" : 0
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "Software.html"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1497"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 42,
+    "second" : 9
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/env_logo.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "3837"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 42,
+    "second" : 30
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "docs/FreeSfw"
+  },
+  "httpAnswerCode" : "302",
+  "requestSize" : "-"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 42,
+    "second" : 35
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "FreeSfw/"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1050"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 42,
+    "second" : 38
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/epa.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "457"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 42,
+    "second" : 50
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "docs/FreeSfw/description.html"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "656"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 44,
+    "second" : 29
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "enviro/html/ef_home.html"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4374"
+}, {
+  "host" : "dd21-047.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 20,
+    "minute" : 45,
+    "second" : 1
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "./enviro/gif/banner.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "14887"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 49,
+    "second" : 48
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "4950"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 50,
+    "second" : 5
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/circle_logo_small.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2624"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 50,
+    "second" : 9
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/small_gopher.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "935"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 50,
+    "second" : 18
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/small_ftp.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "124"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 50,
+    "second" : 20
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/book.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "156"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 50,
+    "second" : 21
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "logos/us-flag.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "2788"
+}, {
+  "host" : "ad03-045.compuserve.com",
+  "datetime" : {
+    "day" : 30,
+    "hour" : 22,
+    "minute" : 50,
+    "second" : 38
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "",
+    "protocol" : "",
+    "protocolVersion" : "icons/ok2-0.gif"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "231"
+} ]
