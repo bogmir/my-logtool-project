@@ -1,5 +1,8 @@
 package com.embevolter.logtool.model;
 
+/**
+*   Class that models part of the data structure from the output JSON file
+*/
 public class LogLine {
     //private String regularExpression; 
     private String host;
@@ -8,7 +11,7 @@ public class LogLine {
     private String httpAnswerCode;
     private String requestSize;
 
-   
+ 
     public LogLine(String host, Datetime datetime, ServerRequest serverRequest,
             String httpAnswerCode, String requestSize) {
         this.host = host;
@@ -64,7 +67,5 @@ public class LogLine {
         return "Line [datetime=" + datetime + ", requestSize=" + requestSize + ", host=" + host
                 + ", httpAnswerCode=" + httpAnswerCode + ", serverRequest="
                 + serverRequest + "]";
-    }
-    
-    
+    }    
 }

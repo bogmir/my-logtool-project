@@ -2,6 +2,9 @@ package com.embevolter.logtool.model;
 
 import com.embevolter.logtool.Utils;
 
+/**
+*   Class that models part of the data structure from the output JSON file
+*/
 public class Datetime {
     private String day;
     private String hour;
@@ -56,6 +59,4 @@ public class Datetime {
 
 		return "Datetime [day=" + day + ", hour=" + hour + ", minute=" + minute + ", second=" + second + "]";
 	}
-
-    
 }

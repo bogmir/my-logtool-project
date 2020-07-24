@@ -2,6 +2,9 @@ package com.embevolter.logtool.model;
 
 import com.embevolter.logtool.Utils;
 
+/**
+*   Class that models part of the data structure from the output JSON file
+*/
 public class ServerRequest {
     private String httpRequestMethod;
     private String url;
@@ -56,6 +59,5 @@ public class ServerRequest {
 
         return "ServerRequest [httpRequestMethod=" + httpRequestMethod + ", protocol=" + protocol + ", protocolVersion="
                 + protocolVersion + ", url=" + url + "]";
-    }
-    
+    }  
 }
