@@ -45,10 +45,16 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         this.inputFileName = inputFileName;
     }
 
+    /**
+     * Output file name can be generated to: inputFileName.json
+     */
     public String getGeneratedOutputFileName(String inputFileName) {
         return inputFileName.replace("txt", "json");
     }
 
+    /**
+     * Launches read&write processes
+     */
     public void launcher() {
         List<T> logLinesToWrite = new <T>ArrayList();
         try {
@@ -67,6 +73,9 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         this.processReport((List<LogLine>)logLinesToWrite);
     }
 
+    /**
+     * Report printed after launcher has finished processing
+     */
     void processReport(List<LogLine> logLinesToWrite) {
         logger.info(String.format("A total of %d lines were processed successfully!", 
             logLinesToWrite.size()));
@@ -75,7 +84,6 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
 
     /**
      * Init FileInputStream
-     * @return
     */
     private void initReader() {
         try {
@@ -101,7 +109,6 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
 
     /**
      * Init Jackson JSON writer 
-     * @return
      */
     private void initWriter(String outFileName) throws Exception {
         if (outputFile == null) 
@@ -114,13 +121,8 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
             writer = mapper.writer(new DefaultPrettyPrinter());
     }
 
-    private void initWriter() throws Exception {
-        initWriter(getGeneratedOutputFileName(inputFileName));
-    }
-
     /**
      * Close FileInputStream  
-     * @return
      */
     private void closeReader() {
         try {
@@ -161,11 +163,9 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         return logLinesToWrite;
     }
 
-       
     /**
      * The EPALogtool implementation is used to write a list of LogLine objects into a JSON file
      * with Jackson library
-     * @return 
      */
     @Override
     public void writeProcessor(List<T> logLines, String outFileName) {
@@ -177,6 +177,10 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         } 
     }
 
+    /**
+     * writeProcessor method with empty argument: 
+     * Will set output file name to: inputFileName.json
+     */
     public void writeProcessor(List<T> logLines) {
         writeProcessor(logLines, getGeneratedOutputFileName(inputFileName));
     }
