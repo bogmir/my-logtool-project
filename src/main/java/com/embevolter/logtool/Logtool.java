@@ -1,9 +1,6 @@
 package com.embevolter.logtool;
 
-import java.util.List;
-
-import com.embevolter.logtool.model.LogLine;
-import com.embevolter.logtool.impl.EPALogtool;
+import com.embevolter.logtool.impl.LogtoolProcesser;
 
 /**
  * Logtool launcher
@@ -21,12 +18,9 @@ public final class Logtool {
             throw new IllegalArgumentException("Invalid number of arguments! /n Logtool Usage: java -jar Logtool 'file'");
         }
 
-        EPALogtool logtool = new EPALogtool(args[0]);
+        
+        LogtoolProcesser logtool = new LogtoolProcesser(args[0]);
 
-        //the EPALogtool implementation is used to read log entries into list
-        List<LogLine> logLinesToWrite = logtool.readProcessor();
-
-        //the EPALogtool implementation is used to write a list of objects into a JSON file
-        logtool.writeProcessor(logLinesToWrite);
+        logtool.launcher();
     }
 }

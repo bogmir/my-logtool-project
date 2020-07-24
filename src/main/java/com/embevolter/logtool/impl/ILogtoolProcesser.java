@@ -3,10 +3,10 @@ package com.embevolter.logtool.impl;
 import java.util.List;
 import java.util.Scanner;
 
-public interface LogtoolInterface<T> {
+public interface ILogtoolProcesser<T> {
     String filePath = "";
 
-    public List<T> readProcessor();
+    public List<?> readProcessor();
     
     public void writeProcessor(List<T> logLine);
     

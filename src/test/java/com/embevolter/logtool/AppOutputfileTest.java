@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.embevolter.logtool.impl.EPALogtool;
+import com.embevolter.logtool.impl.LogtoolProcesser;
 import com.embevolter.logtool.model.LogLine;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +29,7 @@ import org.junit.platform.commons.util.StringUtils;
  * 
  */
 public class AppOutputfileTest implements TestLifecycleLogger {
-    EPALogtool logtool = null;
+    LogtoolProcesser<LogLine> logtool = null;
 
     static final String inputFileName = "resources/epa-http.txt";
     static final int NUMBER_OF_LOG_LINES = 47748;
@@ -39,12 +39,12 @@ public class AppOutputfileTest implements TestLifecycleLogger {
 
     @BeforeEach
     void beforeEach() {
-        logtool = new EPALogtool(inputFileName);
+        logtool = new LogtoolProcesser<LogLine>(inputFileName);
 
         /*
          * read&process all lines of the input file into a result list before each test
          */
-        this.loglines = logtool.readProcessor();
+        this.loglines = (List<LogLine>) logtool.readProcessor();
     }
 
     public boolean containsPropertyWithValue(final List<LogLine> list, final String propertyName, final String value) {

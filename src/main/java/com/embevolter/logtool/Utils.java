@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import com.embevolter.logtool.impl.EPALogtool;
+import com.embevolter.logtool.impl.logsEPA.EPALogtoolForLine;
 
 /**
  * Utils class
@@ -56,7 +56,7 @@ public class Utils {
 
     public static String removeASCIIControlCharactersFromString(String text) {
         return text.replaceAll(
-            EPALogtool.RegexEnum.ASCII_CONTROL_CHARACTERS.toString(), "");
+            EPALogtoolForLine.RegexEnum.ASCII_CONTROL_CHARACTERS.toString(), "");
     }
 
     public static String capitalize(String str) {
