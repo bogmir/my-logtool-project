@@ -5,6 +5,10 @@ Log file processing operations
 The task is to import the access logs for the EPA from 1995, restructure the data and provide a graphical analysis of the data.
 
 
+USAGE: java -jar my-logtool-project-1.0-SNAPSHOT-jar-with-dependencies.jar resources/epa-http.txt
+
+
+
 The data 
 
 Enclosed in this archive is a file named epa-http.txt as well as the description from the following website (not always available): http://ita.ee.lbl.gov/html/contrib/EPA-HTTP.html 
