@@ -17,13 +17,13 @@ interface TestLifecycleLogger {
 
     @BeforeAll
     default void beforeAllTests() {
-        //logger.info("Before all tests: init resource");
-    }
+/*         logger.info("Before all tests: init resource");
+ */    }
 
     @AfterAll
     default void afterAllTests() {
-        //logger.info("After all tests");
-    }
+/*         logger.info("After all tests");
+ */    }
 
     @BeforeEach
     default void beforeEachTest(TestInfo testInfo) {

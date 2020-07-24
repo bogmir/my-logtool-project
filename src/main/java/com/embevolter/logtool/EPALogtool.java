@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.embevolter.logtool.model.Datetime;
 import com.embevolter.logtool.model.LogLine;
@@ -37,7 +39,44 @@ class EPALogtool implements LogtoolInterface<LogLine> {
 
     private ObjectMapper mapper;
     private ObjectWriter writer;
+
+    public static enum RegexEnum {
+        HOST("(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])"),
+        IP_ADDRESS("(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])"),
+        DATETIME("\\[\\d{2}:\\d{2}:\\d{2}:\\d{2}\\]"),
+        REQUEST_METHOD("\"[A-Z]+"),
+        REQUEST_INVALID("\"\\s400"),
+        URL_PATH("\"[A..Z]*\\s[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]*"),
+        PROTOCOL("[A-Z]+/\\d+\\.\\d"),
+        RESPONSE_STATUS("[\\d]+\\s[\\d-]+$"),
+        RESPONSE_SIZE("\\s[\\d-]+$"),
+        //ASCII_CONTROL_CHARACTERS("[\\p{Cntrl}&&[^\r\n\t]]"),
+        //ASCII_CONTROL_CHARACTERS("[^\\x00-\\x7F]"),
+        ASCII_CONTROL_CHARACTERS("\\p{Cc}"),
+        POST_REQUEST("\"POST"),
+        HEAD_REQUEST("\"HEAD"),
+        GET_REQUEST("\"GET");
+
     
+        private String regex;
+     
+        private RegexEnum(String regex) {
+            this.regex = regex;
+        }
+    
+        /**
+         * Override the toString() method to return the label instead of the declared name.
+         */
+        @Override
+        public String toString() {
+            return this.regex;
+        }
+    }
+    
+    /**
+     * Constructor
+     * @param inputFileName: path of log file
+    */
     public EPALogtool(String inputFileName) {
         this.inputFileName = inputFileName;
     }
@@ -46,6 +85,10 @@ class EPALogtool implements LogtoolInterface<LogLine> {
         return inputFileName.replace("txt", "json");
     }
 
+    /**
+     * Init FileInputStream
+     * @return
+    */
     private void initReader() {
         try {
             if (inputFile == null) 
@@ -64,9 +107,13 @@ class EPALogtool implements LogtoolInterface<LogLine> {
     public Scanner initFileScanner() throws IllegalArgumentException {
         initReader();
 
-        return new Scanner(fileInputStream, "ASCII");
+        return new Scanner(fileInputStream, "US-ASCII");
     }
 
+    /**
+     * Init Jackson JSON writer 
+     * @return
+     */
     private void initWriter() throws Exception {
         if (outputFile == null) 
             outputFile = new File(getOutputFileName(inputFileName));
@@ -78,6 +125,10 @@ class EPALogtool implements LogtoolInterface<LogLine> {
             writer = mapper.writer(new DefaultPrettyPrinter());
     }
 
+    /**
+     * Close FileInputStream  
+     * @return
+     */
     private void closeReader() {
         try {
             fileInputStream.close();
@@ -88,10 +139,8 @@ class EPALogtool implements LogtoolInterface<LogLine> {
     
     /**
      * Read every log entries and process it
-     * 
+     * @return list of LogLine objects
      */
-        //
-    //
     @Override
     public List<LogLine> readProcessor() {
         //init captured logLines 
@@ -119,92 +168,187 @@ class EPALogtool implements LogtoolInterface<LogLine> {
         return logLinesToWrite;
     }
 
+    /**
+     * Read and process individual line
+     * @return new LogLine object
+     */
     public LogLine readLine(String lineText) {
         if (lineText == null) return null;
 
-        try {
-            String[] lineTokens = lineText.split(" ");
-            int lineTokensLength = lineTokens.length;
+        String[] lineTokens = lineText.split(" ");
+        int lineTokensLength = lineTokens.length;
 
-            //the array is split to capture each resource fromo the current line in the log
+        String host = "", responseCode, documentSize;
+        Datetime datetime = null;
+        ServerRequest serverRequest;
+
+        //the array is split to capture each resource fromo the current line in the log
+        try {
             //resource: host
-            String host = lineTokens[0];
+            host = lineTokens[0];
 
             //resource: datetime {dd,hh,mm,ss}
-            Datetime datetime = readDatetimeChunk(lineTokens[1]);
+            datetime = readDatetimeChunk(lineTokens[1]);
 
             //because length is variable for serverRequest resources, a dynamic array is captured
             String[] serverRequestTokens = Utils.getArraySubset(lineTokens, 2, lineTokensLength - 2);
                                 
             //resource: serverRequest [requestMethod, urlPath, protocol/protocolVersion] is parsed
-            ServerRequest serverRequest = readServerRequestChunk(serverRequestTokens);
+            serverRequest = readServerRequestChunk(serverRequestTokens);
             
             //resource: responseCode
-            String responseCode = lineTokens[lineTokensLength-2];
+            responseCode = lineTokens[lineTokensLength-2];
 
             //resource: documentSize
-            String documentSize = lineTokens[lineTokensLength-1];
+            documentSize = lineTokens[lineTokensLength-1];
 
-            return new LogLine(host, datetime, serverRequest, responseCode, documentSize);
         } catch (Exception e) {
-            logger.warning("Error while reading line in file: " + inputFileName);
+            logger.warning(
+                String.format(
+                    "Error while reading line: %s [%s]", 
+                     host, datetime!= null ? datetime.toString() : "[]")
+            );
+
             return null;
         }
+
+        return new LogLine(host, datetime, serverRequest, responseCode, documentSize);
     } 
 
+    /**
+     * DateTime sequence from Log line is parsed into its component elements
+     * @return new Datetime object
+     */
     private Datetime readDatetimeChunk(String datetimeSequence) {
         //"Datetime" sequence is stripped of leading and trailing brackets
         //and split into its discrete elements
-        String dateTimeElements[] = datetimeSequence
+        String datetimeElements[] = datetimeSequence
             .substring(1, datetimeSequence.length()-1)
             .split(":");
 
-        int[] intDatetimeElements = Utils.parseToIntArray(dateTimeElements);
-        
-        return new Datetime(intDatetimeElements[0], intDatetimeElements[1], intDatetimeElements[2], intDatetimeElements[3]);
+        return new Datetime(datetimeElements[0], datetimeElements[1], datetimeElements[2], datetimeElements[3]);
     }
 
-    //TODO: workTODO
+    /**
+     * The httpRequestedMethod component exists only if the chunk starts with a " followed by
+     * capitalized sequence of characters, i.e.: "GET", "POST", "HEAD", etc. 
+     * 
+     * @return httpRequestMethod String
+     */  
+    private String getHttpRequestMethodFromChunk(String[] serverRequestSequence) {
+        String firstSequence = serverRequestSequence[0];
+
+        Pattern httpRequestMethodPattern = Pattern.compile(RegexEnum.REQUEST_METHOD.toString());
+        Matcher httpRequestMethodMatcher = httpRequestMethodPattern.matcher(firstSequence);
+        boolean httpMethodMatcherFound = httpRequestMethodMatcher.find();
+
+        /*
+        * Remove first character (a quotation mark) of the first sequence of characters or chunk
+        */
+        firstSequence = firstSequence.substring(1);
+
+        return (httpMethodMatcherFound) ? firstSequence: "";
+    }
+
+    /*
+    * Determining the existence of the third and last component in the chunk, 
+    * the ending position of the URL sequence can be inferred
+
+    * @return protocol String
+    */
+    private String getProtocolSequenceFromChunk(String[] serverRequestSequence) {
+        String lastSequence = serverRequestSequence[serverRequestSequence.length-1];
+
+        Pattern protocolPattern = Pattern.compile(RegexEnum.PROTOCOL.toString());
+        Matcher protocolMatcher = protocolPattern.matcher(lastSequence);
+        boolean protocolFound = protocolMatcher.find();
+
+        /*
+        * Remove last character (a quotation mark) of the last sequence of characters or chunk
+        */
+        lastSequence = lastSequence.substring(0, lastSequence.length()-1);
+
+        return (protocolFound) ? lastSequence : "";
+    }
+
+
+    /**
+     * ServerRequest sequence is a part of a log line that does not always come as expected
+     * Some elements might be missing or the URL might contain space characters
+     * @return new ServerRequest object
+     */
     private ServerRequest readServerRequestChunk(String[] serverRequestSequence) {
         
-        int serverRequestSequenceLength = serverRequestSequence.length;
+        int sequenceArrayLength = serverRequestSequence.length;
 
-        //remove first character of the sequence (a double quotation mark)
-        String httpRequestMethod = serverRequestSequence[0].substring(1);
+        /*
+        * ----------------  FIRST SEQUENCE ---------------
+        */
+        String httpRequestMethod = this.getHttpRequestMethodFromChunk(serverRequestSequence);
 
-        //TODO:comment
+        /*
+        * ----------------  LAST SEQUENCE ---------------
+        */
 
-        String urlSequence = 
-            Utils.getArraySubsetToString(serverRequestSequence, 1, serverRequestSequenceLength - 1);
+        String protocolSequence = this.getProtocolSequenceFromChunk(serverRequestSequence);
 
-        //TODO:TEST for existence 
-        String protocolSequence = (serverRequestSequenceLength >= 2) 
-            ? serverRequestSequence[serverRequestSequenceLength-1] : null;
-
-
-        int protocolSequenceSeparatorIndex = (protocolSequence != null) 
+        int protocolSequenceSeparatorIndex = (!Utils.isNullOrEmpty(protocolSequence)) 
             ? protocolSequence.indexOf("/") : 0;
 
-        String protocol = (protocolSequence != null) 
+        String protocol = (!Utils.isNullOrEmpty(protocolSequence)) 
             ? protocolSequence.substring(0, protocolSequenceSeparatorIndex) : "";
             
-        String protocolVersion = (protocolSequence != null) 
+        String protocolVersion = (!Utils.isNullOrEmpty(protocolSequence)) 
             ? protocolSequence.substring(
-                protocolSequenceSeparatorIndex+1, protocolSequence.length()-1) : "";
+                protocolSequenceSeparatorIndex+1, protocolSequence.length()) : "";
+
+    
+        /*
+        * ----------------  MIDDLE SEQUENCE (URL SEQUENCE) ---------------
+        * this middle sequence is determined by exclusion because it may contain
+        * space characters and therefore, difficult to pin down 
+        */
+
+        /**
+         * The initial position of the URL component (the next component sought in the chunk) 
+         * is 0 if the httpRequestmethod was not found
+         */      
+        int urlSequenceStartPosition = (!Utils.isNullOrEmpty(httpRequestMethod)) ? 1 : 0;
+
+        /**
+         * The initial position of the URL component (the next component sought in the chunk) 
+         * is 0 if the httpRequestmethod was not found
+         */      
+        int urlSequenceEndPosition = (!Utils.isNullOrEmpty(protocolSequence)) 
+            ?  sequenceArrayLength-1 : sequenceArrayLength;   
+
+        String urlSequence = 
+            Utils.getArraySubsetToString(serverRequestSequence, urlSequenceStartPosition, urlSequenceEndPosition);
+        
+        //TODO: chapuza 
+        if (Utils.isNullOrEmpty(protocolSequence)) {
+            urlSequence = urlSequence.substring(1);
+        }
+        if (Utils.isNullOrEmpty(protocolSequence)) {
+            urlSequence = urlSequence.substring(0, urlSequence.length() - 1);
+        }
 
         return new ServerRequest(httpRequestMethod, urlSequence, protocol, protocolVersion);
     }
 
-        //the EPALogtool implementation is used to write a list of objects into a JSON file
-        @Override
-        public void writeProcessor(List<LogLine> logLines) {
-            try {
-                initWriter();
-    
-                writer.writeValue(outputFile, logLines);
-            } catch (Exception ex) {
-                //TODO: make it more specific
-                logger.warning("Error during writing to the JSON file");
-            } 
-        }
+        
+    /**
+     * The EPALogtool implementation is used to write a list of LogLine objects into a JSON file
+     * with Jackson library
+     * @return 
+     */
+    @Override
+    public void writeProcessor(List<LogLine> logLines) {
+        try {
+            initWriter();
+            writer.writeValue(outputFile, logLines);
+        } catch (Exception ex) {
+            logger.warning("Error during writing to the JSON file");
+        } 
+    }
 }

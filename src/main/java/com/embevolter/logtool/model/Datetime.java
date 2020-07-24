@@ -1,52 +1,59 @@
 package com.embevolter.logtool.model;
 
-public class Datetime {
-    private int day;
-    private int hour;
-    private int minute;
-    private int second;
+import com.embevolter.logtool.Utils;
 
-    public Datetime(int day, int hour, int minute, int second) {
+public class Datetime {
+    private String day;
+    private String hour;
+    private String minute;
+    private String second;
+
+    public Datetime(String day, String hour, String minute, String second) {
         this.day = day;
         this.hour = hour;
         this.minute = minute;
         this.second = second;
     }
 
-    public int getDay() {
+    public String getDay() {
         return day;
     }
 
-    public void setDay(int day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
-    public int getHour() {
+    public String getHour() {
         return hour;
     }
 
-    public void setHour(int hour) {
+    public void setHour(String hour) {
         this.hour = hour;
     }
 
-    public int getMinute() {
+    public String getMinute() {
         return minute;
     }
 
-    public void setMinute(int minute) {
+    public void setMinute(String minute) {
         this.minute = minute;
     }
 
-    public int getSecond() {
+    public String getSecond() {
         return second;
     }
 
-    public void setSecond(int second) {
+    public void setSecond(String second) {
         this.second = second;
     }
 
 	@Override
 	public String toString() {
+        if (Utils.isNullOrEmpty(day) && Utils.isNullOrEmpty(day) 
+            && Utils.isNullOrEmpty(day) && Utils.isNullOrEmpty(day)) {
+            return "";
+        }
+
 		return "Datetime [day=" + day + ", hour=" + hour + ", minute=" + minute + ", second=" + second + "]";
 	}
 

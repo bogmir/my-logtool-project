@@ -1,5 +1,7 @@
 package com.embevolter.logtool.model;
 
+import com.embevolter.logtool.Utils;
+
 public class ServerRequest {
     private String httpRequestMethod;
     private String url;
@@ -47,6 +49,11 @@ public class ServerRequest {
 
     @Override
     public String toString() {
+        if (Utils.isNullOrEmpty(httpRequestMethod) && Utils.isNullOrEmpty(url) 
+            && Utils.isNullOrEmpty(protocol) && Utils.isNullOrEmpty(protocolVersion)) {
+            return "";
+        }
+
         return "ServerRequest [httpRequestMethod=" + httpRequestMethod + ", protocol=" + protocol + ", protocolVersion="
                 + protocolVersion + ", url=" + url + "]";
     }

@@ -11,5 +11,4 @@ interface LogtoolInterface<T> {
     public void writeProcessor(List<T> logLine);
     
     public Scanner initFileScanner() throws IllegalArgumentException;
-
 }
