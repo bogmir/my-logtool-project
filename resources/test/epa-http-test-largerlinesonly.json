@@ -1,0 +1,689 @@
+[ {
+  "host" : "cragateway.cra.com.au",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "00",
+    "minute" : "26",
+    "second" : "38"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Query Report for this Search&type=TEXT&docid=\u0002\u001C/usr1/comwais/indexes/HTDOCS\u0003\u00150 0 /tmp/08300129.fk8\u0007\u0001",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "202.32.50.6",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "02",
+    "minute" : "14",
+    "second" : "08"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Mobile Source Emission Regulations &amp; Related Reports&type=HTML&docid=\u0001",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "202.32.50.6",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "03",
+    "minute" : "02",
+    "second" : "06"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Query Report for this Search&type=TEXT&docid=\u0002\u001C/usr1/comwais/indexes/HTDOCS\u0003\u00150 0 /tmp/08300405.g3c\u0007\u0001",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "202.32.50.6",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "03",
+    "minute" : "03",
+    "second" : "21"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Query Report for this Search&type=TEXT&docid=\u0002\u001C/usr1/comwais/indexes/HTDOCS\u0003\u00150 0 /tmp/08300407.70m\u0007\u0001",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "202.32.50.6",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "03",
+    "minute" : "04",
+    "second" : "42"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Mobile Source Emission Regulations &amp; Related Reports&type=HTML&docid=\u0001",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "r02dg13.r02.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "08",
+    "minute" : "53",
+    "second" : "23"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/cgi-bin/waisgate/134.67.99.11=earth1.epa.gov=210=/usr1/comwais/indexes/PressReleases=gopher%40earth1=0.00=:free ",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "oa8.r5ora.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "09",
+    "minute" : "36",
+    "second" : "41"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s5-6.html>Atmospheric Sciences Modeling Division",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "oa8.r5ora.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "09",
+    "minute" : "36",
+    "second" : "49"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s1-1.html>National Library Network Program</a><br><ul>",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "26",
+    "second" : "58"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ publist1.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "27",
+    "second" : "08"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ publist1.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "29",
+    "second" : "58"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ comments.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "30",
+    "second" : "06"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ bullform.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "30",
+    "second" : "15"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ comments.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "30",
+    "second" : "26"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ publist1.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "owowdg2.fchild.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "30",
+    "second" : "32"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/OWOW/PubList/ publist1.html",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "1933"
+}, {
+  "host" : "dcimsd23.dcimsd.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "10",
+    "minute" : "56",
+    "second" : "52"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/epahome/images/warn.gif width=20 height=20",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "889"
+}, {
+  "host" : "oea4.r8stw56.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "11",
+    "minute" : "19",
+    "second" : "47"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "Rules.html>Federal register ",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "oea4.r8stw56.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "11",
+    "minute" : "20",
+    "second" : "19"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "Rules.html>Federal register ",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "ghoffman.csc.com",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "11",
+    "minute" : "32",
+    "second" : "02"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/docs/oswer Super",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "so.scsnet.com",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "36",
+    "second" : "23"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Office of Air and Radiation Publications&type=HTML&docid=\u0001",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "so.scsnet.com",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "36",
+    "second" : "46"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline= EPA Public Access Object Retrievals.&type=HTML&docid=\u0001",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "wilkey.es.anl.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "44",
+    "second" : "07"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s6-2.html>Andrew W. Breidenbach Environmental",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "wilkey.es.anl.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "44",
+    "second" : "22"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s1-1.html>National Library Network Program</a><br><ul>",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "wilkey.es.anl.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "44",
+    "second" : "42"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s11-2.html>Environmental Research Laboratory Library (ERL-C),",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "wilkey.es.anl.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "44",
+    "second" : "49"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s7-1.html>Region 6 Library, Dallas, TX</a><br>",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "wilkey.es.anl.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "45",
+    "second" : "08"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s6-4.html>National Vehicle and Fuel Emissions Laboratory",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "lab7.pc.fsu.edu",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "51",
+    "second" : "32"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s11-2.html>Environmental Research Laboratory Library (ERL-C),",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "lab7.pc.fsu.edu",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "51",
+    "second" : "40"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s4-2.html>Central Regional Laboratory Library,",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "lab7.pc.fsu.edu",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "13",
+    "minute" : "52",
+    "second" : "03"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s5-2.html>Library Services Office,",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "dcimsd23.dcimsd.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "14",
+    "minute" : "36",
+    "second" : "56"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/epahome/images/warn.gif width=20 height=20",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "304",
+  "requestSize" : "0"
+}, {
+  "host" : "140.90.166.59",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "15",
+    "minute" : "56",
+    "second" : "56"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/region 1/lis",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "140.90.166.59",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "06",
+    "second" : "01"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/region 1/lis",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "intevep.pdv.com",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "07",
+    "second" : "45"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/cgi-bin/waisgate?port=210&ip_address=earth1&database_name=/usr1/comwais/indexes/HTDOCS&headline=Information on database: HTDOCS&type=WSRC&docid=\u0002\u001C/usr1/comwais/indexes/HTDOCS\u0003+0 0 /usr1/comwais/indexes/HTDOCS/HTDOCS.src\u0007\u0001",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "200",
+  "requestSize" : "169"
+}, {
+  "host" : "dcimsd23.dcimsd.epa.gov",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "07",
+    "second" : "56"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/epahome/images/warn.gif width=20 height=20",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "304",
+  "requestSize" : "0"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "08",
+    "second" : "43"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s11-2.html>Environmental Research Laboratory Library (ERL-C),",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "08",
+    "second" : "50"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s1-1.html>National Library Network Program</a><br><ul>",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "08",
+    "second" : "55"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s1-3.html>Legislative Reference Library, Washington, DC</a><br>",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "09",
+    "second" : "01"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s1-5.html>Office of Pollution Prevention and Toxics Library",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "09",
+    "second" : "06"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s2-2.html>Environmental Research Laboratory Library,",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "09",
+    "second" : "14"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s5-6.html>Atmospheric Sciences Modeling Division",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "e3e0.nei.org",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "09",
+    "second" : "22"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "docs/Access/chapter6/s6-2.html>Andrew W. Breidenbach Environmental",
+    "protocol" : "",
+    "protocolVersion" : ""
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "140.90.166.59",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "14",
+    "second" : "30"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/region 1/lis",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+}, {
+  "host" : "libr156.colorado.edu",
+  "datetime" : {
+    "day" : "30",
+    "hour" : "16",
+    "minute" : "57",
+    "second" : "30"
+  },
+  "serverRequest" : {
+    "httpRequestMethod" : "GET",
+    "url" : "/Radon Pubs",
+    "protocol" : "HTTP",
+    "protocolVersion" : "1.0"
+  },
+  "httpAnswerCode" : "404",
+  "requestSize" : "-"
+} ]

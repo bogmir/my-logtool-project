@@ -90,7 +90,7 @@ class LogtoolTest implements TestLifecycleLogger {
         }
 
         try {
-            logtool.writeProcessor(logLinesToWrite);
+            logtool.writeProcessor(logLinesToWrite, "resources/test/epa-http-test-normallinesonly.json");
         } catch (Exception ex) {
             fail("The writing of normal lines was not possible!");
         }
@@ -110,7 +110,7 @@ class LogtoolTest implements TestLifecycleLogger {
         }
 
         try {
-            logtool.writeProcessor(logLinesToWrite);
+            logtool.writeProcessor(logLinesToWrite, "resources/test/epa-http-test-shorterlinesonly.json");
         } catch (Exception ex) {
             fail("The writing of normal lines was not possible!");
         }
@@ -129,7 +129,7 @@ class LogtoolTest implements TestLifecycleLogger {
         }
 
         try {
-            logtool.writeProcessor(logLinesToWrite);
+            logtool.writeProcessor(logLinesToWrite, "resources/test/epa-http-test-largerlinesonly.json");
         } catch (Exception ex) {
             fail("The writing of normal lines was not possible!");
         }

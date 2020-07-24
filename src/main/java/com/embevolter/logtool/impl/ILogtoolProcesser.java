@@ -8,7 +8,7 @@ public interface ILogtoolProcesser<T> {
 
     public List<?> readProcessor();
     
-    public void writeProcessor(List<T> logLine);
+    public void writeProcessor(List<T> logLine, String outputFileName);
     
     public Scanner initFileScanner() throws IllegalArgumentException;
 }

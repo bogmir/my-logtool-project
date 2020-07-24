@@ -45,7 +45,7 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         this.inputFileName = inputFileName;
     }
 
-    public String getOutputFileName(String inputFileName) {
+    public String getGeneratedOutputFileName(String inputFileName) {
         return inputFileName.replace("txt", "json");
     }
 
@@ -100,15 +100,19 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
      * Init Jackson JSON writer 
      * @return
      */
-    private void initWriter() throws Exception {
+    private void initWriter(String outFileName) throws Exception {
         if (outputFile == null) 
-            outputFile = new File(getOutputFileName(inputFileName));
+            outputFile = new File(outFileName);
 
         if (mapper == null) 
             mapper = new ObjectMapper();
         
         if (writer == null) 
             writer = mapper.writer(new DefaultPrettyPrinter());
+    }
+
+    private void initWriter() throws Exception {
+        initWriter(getGeneratedOutputFileName(inputFileName));
     }
 
     /**
@@ -161,12 +165,17 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
      * @return 
      */
     @Override
-    public void writeProcessor(List<T> logLines) {
+    public void writeProcessor(List<T> logLines, String outFileName) {
         try {
-            initWriter();
+            initWriter(outFileName);
             writer.writeValue(outputFile, logLines);
         } catch (Exception ex) {
             logger.warning("Error during writing to the JSON file");
         } 
     }
+
+    public void writeProcessor(List<T> logLines) {
+        writeProcessor(logLines, getGeneratedOutputFileName(inputFileName));
+    }
+
 }
