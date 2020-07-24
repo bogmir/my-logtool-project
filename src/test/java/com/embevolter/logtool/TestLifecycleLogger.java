@@ -13,7 +13,7 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 @TestInstance(Lifecycle.PER_CLASS)
 interface TestLifecycleLogger {
 
-    static final Logger logger = Logger.getLogger(TestLifecycleLogger.class.getName());
+    final Logger logger = Logger.getLogger(TestLifecycleLogger.class.getName());
 
     @BeforeAll
     default void beforeAllTests() {

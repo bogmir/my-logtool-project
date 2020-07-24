@@ -42,7 +42,7 @@ public class EPALogtoolForLine {
     
         private String regex;
      
-        private RegexEnum(String regex) {
+        RegexEnum(String regex) {
             this.regex = regex;
         }
     
@@ -60,9 +60,9 @@ public class EPALogtoolForLine {
      * @return list of LogLine objects
      */
     public LogLine processLine(String lineText) {
-        lineText = Utils.removeASCIIControlCharactersFromString(lineText);
+        String line = Utils.removeASCIIControlCharactersFromString(lineText);
 
-        return this.readLine(lineText);
+        return this.readLine(line);
     }
 
 
@@ -200,7 +200,7 @@ public class EPALogtoolForLine {
             ? protocolSequence.substring(
                 protocolSequenceSeparatorIndex+1, protocolSequence.length()) : "";
 
-    
+
         /*
         * ----------------  MIDDLE SEQUENCE (URL SEQUENCE) ---------------
         * this middle sequence is determined by exclusion because it may contain
@@ -216,7 +216,7 @@ public class EPALogtoolForLine {
         /**
          * The initial position of the URL component (the next component sought in the chunk) 
          * is 0 if the httpRequestmethod was not found
-         */      
+         */
         int urlSequenceEndPosition = (!Utils.isNullOrEmpty(protocolSequence)) 
             ?  sequenceArrayLength-1 : sequenceArrayLength;   
 

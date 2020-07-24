@@ -11,15 +11,15 @@ import java.util.stream.Stream;
 import com.embevolter.logtool.impl.logsEPA.EPALogtoolForLine;
 
 /**
- * Utils class
+ * Utility class
  */
 public class Utils {
 
-    public static BiFunction<Integer, Integer, Boolean> equalsOp = (a,b) -> a == b;
+    public static BiFunction<Integer, Integer, Boolean> equalsOp = (a, b) -> a == b;
 
-    public static BiFunction<Integer, Integer, Boolean> greaterThanOp = (a,b) -> a > b;
+    public static BiFunction<Integer, Integer, Boolean> greaterThanOp = (a, b) -> a > b;
 
-    public static BiFunction<Integer, Integer, Boolean> smallerThanOp = (a,b) -> a < b;
+    public static BiFunction<Integer, Integer, Boolean> smallerThanOp = (a, b) -> a < b;
 
     public static int[] parseToIntArray(String[] arr) {
         return Stream.of(arr)
@@ -42,15 +42,15 @@ public class Utils {
         return String.join(" ", Arrays.asList(array));
     }
 
-    public static boolean isNullOrEmpty(final String s ) {
+    public static boolean isNullOrEmpty(final String s) {
         return s == null || s.trim().isEmpty();
     }
 
-    public static boolean isNullOrEmpty( final Collection< ? > c ) {
+    public static boolean isNullOrEmpty(final Collection<?> c) {
         return c == null || c.isEmpty();
     }
 
-    public static boolean isNullOrEmpty( final List< ? > l ) {
+    public static boolean isNullOrEmpty(final List<?> l) {
         return l == null || l.isEmpty();
     }
 

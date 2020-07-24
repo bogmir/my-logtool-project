@@ -22,19 +22,19 @@ import org.junit.jupiter.api.Test;
  * Unit tests for the input file in the Logtool App.
  */
 public class AppInputfileTest implements TestLifecycleLogger {
-    LogtoolProcesser<LogLine> logtool = null;
+    LogtoolProcesser<LogLine> logtool;
 
     static final String inputFileName = "resources/epa-http.txt";
 
-    static final int NUMBER_OF_LOG_LINES = 47748;
-    static final int NUMBER_OF_PROPERTIES_PER_LINE = 7;
     static final int NUMBER_OF_GET_REQUESTS = 46014;
-    static final int NUMBER_OF_POST_REQUESTS = 1622;
     static final int NUMBER_OF_HEAD_REQUESTS = 106;
+    static final int NUMBER_OF_LOG_LINES = 47748;
+    static final int NUMBER_OF_POST_REQUESTS = 1622;
+    static final int NUMBER_OF_PROPERTIES_PER_LINE = 7;
     static final int NUMBER_OF_INVALID_REQUESTS = 6;
 
     List<LogLine> loglines;
- 
+
 
     @BeforeEach
     void beforeEach() {
@@ -45,7 +45,7 @@ public class AppInputfileTest implements TestLifecycleLogger {
         int counter = 0;
         try (Scanner sc = logtool.initFileScanner()) {
             Pattern pattern = Pattern.compile(regex);
-    
+
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
                 Matcher matcher = pattern.matcher(line);

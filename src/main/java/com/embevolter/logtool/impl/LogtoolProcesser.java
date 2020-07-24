@@ -50,7 +50,7 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
     }
 
     public void launcher() {
-        List<T> logLinesToWrite = new <T>ArrayList();;
+        List<T> logLinesToWrite = new <T>ArrayList();
         try {
             //the EPALogtool implementation is used to read log entries into list
             logLinesToWrite = (List<T>) this.readProcessor();

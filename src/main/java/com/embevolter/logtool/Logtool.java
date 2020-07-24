@@ -11,10 +11,13 @@ public final class Logtool {
     private Logtool() {
     }
 
+    /**
+     * @param args The one expected argument consists of the path of the input file
+     */
     public static void main(String[] args) {
 
         //input filename is read as an argument from the command line jar
-        if( args.length != 1 ) {
+        if(args.length != 1) {
             throw new IllegalArgumentException("Invalid number of arguments! /n Logtool Usage: java -jar Logtool 'file'");
         }
         

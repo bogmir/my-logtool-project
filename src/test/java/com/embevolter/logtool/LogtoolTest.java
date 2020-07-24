@@ -18,13 +18,12 @@ import org.junit.jupiter.api.Test;
  * Unit tests for line processing in Logtool App.
  */
 class LogtoolTest implements TestLifecycleLogger {
-    LogtoolProcesser<LogLine> logtool = null;
-    EPALogtoolForLine logtoolForLine = null;
+    LogtoolProcesser<LogLine> logtool;
+    EPALogtoolForLine logtoolForLine;
 
     static final String inputFileName = "resources/epa-http.txt";
-
-    static final int NUMBER_OF_PROPERTIES_PER_LINE = 7;
     static final int NUMBER_OF_LOG_LINES = 47748;
+    static final int NUMBER_OF_PROPERTIES_PER_LINE = 7;
 
 
     @BeforeEach

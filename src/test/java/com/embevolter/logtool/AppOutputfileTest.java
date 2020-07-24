@@ -90,7 +90,7 @@ public class AppOutputfileTest implements TestLifecycleLogger {
         LogLine logLineWithEmptyHost = loglines.stream()
             .filter(o -> "".equals(o.getHost()))
             .findAny().orElse(null);
-        
+
         assertNotNull(logLineWithEmptyHost);
     }
 
@@ -109,7 +109,7 @@ public class AppOutputfileTest implements TestLifecycleLogger {
         LogLine logLineWithEmptyHost = loglines.stream()
             .filter(o -> "".equals(o.getDatetime().toString()))
             .findAny().orElse(null);
-        
+
         assertNotNull(logLineWithEmptyHost);
     }
 
@@ -149,7 +149,7 @@ public class AppOutputfileTest implements TestLifecycleLogger {
     @Test
     void thereAreLinesWithEmptyRequestMethod() {
         List<LogLine> logLinesWithEmptyRequestMethod = loglines.stream()
-            .filter(o -> (o.getServerRequest() == null) 
+            .filter(o -> (o.getServerRequest() == null)
                 || Utils.isNullOrEmpty(o.getServerRequest().getHttpRequestMethod()))
             .collect(Collectors.toList());
 
@@ -178,7 +178,7 @@ public class AppOutputfileTest implements TestLifecycleLogger {
 
         logger.info(" Number of objects with empty Protocol: " + logLinesWithEmptyProtocol.size());   
 
-        assertFalse( Utils.isNullOrEmpty(logLinesWithEmptyProtocol) );
+        assertFalse(Utils.isNullOrEmpty(logLinesWithEmptyProtocol));
     }
 
     @Test
@@ -216,8 +216,8 @@ public class AppOutputfileTest implements TestLifecycleLogger {
         
         assertNotNull(logLineWithEmptyRequestSize);
     }
-    
-    
+
+
     @Test
     void totalNumberOfLinesWrittenInOutput() {
         assertEquals(loglines.size(), NUMBER_OF_LOG_LINES);
