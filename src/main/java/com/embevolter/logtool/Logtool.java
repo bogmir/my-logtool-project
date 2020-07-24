@@ -17,7 +17,6 @@ public final class Logtool {
         if( args.length != 1 ) {
             throw new IllegalArgumentException("Invalid number of arguments! /n Logtool Usage: java -jar Logtool 'file'");
         }
-
         
         LogtoolProcesser logtool = new LogtoolProcesser(args[0]);
 

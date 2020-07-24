@@ -50,12 +50,24 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
     }
 
     public void launcher() {
-        //the EPALogtool implementation is used to read log entries into list
-        @SuppressWarnings("unchecked")
-        List<T> logLinesToWrite = (List<T>) this.readProcessor();
+        List<T> logLinesToWrite = new <T>ArrayList();;
+        try {
+            //the EPALogtool implementation is used to read log entries into list
+            logLinesToWrite = (List<T>) this.readProcessor();
 
-        //the EPALogtool implementation is used to write a list of objects into a JSON file
-        this.writeProcessor(logLinesToWrite);
+            //the EPALogtool implementation is used to write a list of objects into a JSON file
+            this.writeProcessor(logLinesToWrite);
+        } catch (Exception e) {
+            System.out.println("Oooooops.... Something weng wrong during the transformation. Logtool Usage: java -jar Logtool 'file'");
+            e.printStackTrace();
+        }
+
+        //give an account of the input file and the transformation 
+        this.processReport((List<LogLine>)logLinesToWrite);
+    }
+
+    void processReport(List<LogLine> logLinesToWrite) {
+        System.out.println(String.format("A total of %d lines were processed successfully!", logLinesToWrite.size()));
     }
     
 

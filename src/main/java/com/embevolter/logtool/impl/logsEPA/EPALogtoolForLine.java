@@ -10,7 +10,7 @@ import com.embevolter.logtool.model.LogLine;
 import com.embevolter.logtool.model.ServerRequest;
 
 /**
-* 
+*    Line processing for the EPA logs
 */
 
 public class EPALogtoolForLine {
