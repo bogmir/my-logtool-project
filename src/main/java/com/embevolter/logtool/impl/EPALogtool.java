@@ -1,4 +1,4 @@
-package com.embevolter.logtool;
+package com.embevolter.logtool.impl;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.embevolter.logtool.Utils;
 import com.embevolter.logtool.model.Datetime;
 import com.embevolter.logtool.model.LogLine;
 import com.embevolter.logtool.model.ServerRequest;
@@ -28,7 +29,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 * @since   2020-07-20 
 */
 
-class EPALogtool implements LogtoolInterface<LogLine> {
+public class EPALogtool implements LogtoolInterface<LogLine> {
    
     static final Logger logger = Logger.getLogger(EPALogtool.class.getName());
     

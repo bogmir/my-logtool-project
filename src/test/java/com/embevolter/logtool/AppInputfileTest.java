@@ -10,6 +10,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.embevolter.logtool.impl.EPALogtool;
 import com.embevolter.logtool.model.LogLine;
 
 import org.junit.jupiter.api.BeforeEach;

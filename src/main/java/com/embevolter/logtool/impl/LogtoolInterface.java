@@ -1,9 +1,9 @@
-package com.embevolter.logtool;
+package com.embevolter.logtool.impl;
 
 import java.util.List;
 import java.util.Scanner;
 
-interface LogtoolInterface<T> {
+public interface LogtoolInterface<T> {
     String filePath = "";
 
     public List<T> readProcessor();

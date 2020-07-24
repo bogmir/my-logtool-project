@@ -3,6 +3,7 @@ package com.embevolter.logtool;
 import java.util.List;
 
 import com.embevolter.logtool.model.LogLine;
+import com.embevolter.logtool.impl.EPALogtool;
 
 /**
  * Logtool launcher

@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import com.embevolter.logtool.impl.EPALogtool;
+
 /**
  * Utils class
  */
@@ -19,24 +21,24 @@ public class Utils {
 
     public static BiFunction<Integer, Integer, Boolean> smallerThanOp = (a,b) -> a < b;
 
-    static int[] parseToIntArray(String[] arr) {
+    public static int[] parseToIntArray(String[] arr) {
         return Stream.of(arr)
             .mapToInt(Integer::parseInt)
             .toArray();
     }
-    static String[] getArraySubset(String[] array, int startInclusive, int endExclusive) {
+    public static String[] getArraySubset(String[] array, int startInclusive, int endExclusive) {
         return IntStream.range(startInclusive, endExclusive)
             .mapToObj(i -> array[i])
             .toArray(String[]::new);
     }
 
-    static String getArraySubsetToString(String[] array, int startInclusive, int endExclusive) {
+    public static String getArraySubsetToString(String[] array, int startInclusive, int endExclusive) {
         return IntStream.range(startInclusive, endExclusive)
             .mapToObj(i -> array[i])
             .collect(Collectors.joining(" "));
     }
 
-    static String getStringFromArray(String[] array) {
+    public static String getStringFromArray(String[] array) {
         return String.join(" ", Arrays.asList(array));
     }
 
@@ -52,7 +54,7 @@ public class Utils {
         return l == null || l.isEmpty();
     }
 
-    static String removeASCIIControlCharactersFromString(String text) {
+    public static String removeASCIIControlCharactersFromString(String text) {
         return text.replaceAll(
             EPALogtool.RegexEnum.ASCII_CONTROL_CHARACTERS.toString(), "");
     }

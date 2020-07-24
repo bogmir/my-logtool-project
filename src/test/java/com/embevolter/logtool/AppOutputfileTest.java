@@ -9,8 +9,8 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.embevolter.logtool.impl.EPALogtool;
 import com.embevolter.logtool.model.LogLine;
-import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
