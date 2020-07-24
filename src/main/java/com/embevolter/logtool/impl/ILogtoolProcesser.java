@@ -1,8 +1,13 @@
 package com.embevolter.logtool.impl;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
+
+/**
+* Interface for LogtoolProcesser implementations
+*/
 public interface ILogtoolProcesser<T> {
     String filePath = "";
 
@@ -10,5 +15,5 @@ public interface ILogtoolProcesser<T> {
     
     public void writeProcessor(List<T> logLine, String outputFileName);
     
-    public Scanner initFileScanner() throws IllegalArgumentException;
+    public Scanner initFileScanner() throws IllegalArgumentException, IOException;
 }

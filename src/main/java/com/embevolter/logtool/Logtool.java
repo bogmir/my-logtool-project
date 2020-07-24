@@ -18,7 +18,8 @@ public final class Logtool {
 
         //input filename is read as an argument from the command line jar
         if(args.length != 1) {
-            throw new IllegalArgumentException("Invalid number of arguments! /n Logtool Usage: java -jar Logtool 'file'");
+            System.out.println("Invalid number of arguments! /n Logtool Usage: java -jar Logtool 'file'");
+            System.exit(0);
         }
         
         LogtoolProcesser logtool = new LogtoolProcesser(args[0]);

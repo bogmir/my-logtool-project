@@ -10,9 +10,8 @@ import com.embevolter.logtool.model.LogLine;
 import com.embevolter.logtool.model.ServerRequest;
 
 /**
-*    Line processing for the EPA logs
+*    Line processing class for the EPA (1995) style logs
 */
-
 public class EPALogtoolForLine {
    
     static final Logger logger = Logger.getLogger(EPALogtoolForLine.class.getName());

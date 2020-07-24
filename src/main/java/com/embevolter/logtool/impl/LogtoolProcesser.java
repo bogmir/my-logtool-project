@@ -58,8 +58,9 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
             //the EPALogtool implementation is used to write a list of objects into a JSON file
             this.writeProcessor(logLinesToWrite);
         } catch (Exception e) {
-            System.out.println("Oooooops.... Something weng wrong during the transformation. Logtool Usage: java -jar Logtool 'file'");
-            e.printStackTrace();
+            logger.info("Oooooops.... This cool tool cannot be used. /n Logtool Usage: java -jar Logtool 'file'");
+            System.exit(0);
+            //e.printStackTrace();
         }
 
         //give an account of the input file and the transformation 
@@ -67,7 +68,8 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
     }
 
     void processReport(List<LogLine> logLinesToWrite) {
-        System.out.println(String.format("A total of %d lines were processed successfully!", logLinesToWrite.size()));
+        logger.info(String.format("A total of %d lines were processed successfully!", 
+            logLinesToWrite.size()));
     }
     
 
@@ -84,13 +86,14 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
                 fileInputStream = new FileInputStream(inputFile);
 
         } catch (NullPointerException e) {
-            logger.warning("You have not provided an input file!");
+            logger.severe("You have not provided an input file!");
         } catch (FileNotFoundException e) {
-            logger.warning(String.format("The resource from %s cannot be read!", inputFileName));
+            logger.severe(String.format("%s cannot be read! It might not exist on the specified path", inputFileName));
+            System.exit(0);
         }
     }
 
-    public Scanner initFileScanner() throws IllegalArgumentException {
+    public Scanner initFileScanner() {
         initReader();
 
         return new Scanner(fileInputStream, "US-ASCII");
