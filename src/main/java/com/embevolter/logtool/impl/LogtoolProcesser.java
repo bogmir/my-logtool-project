@@ -10,6 +10,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 import com.embevolter.logtool.impl.logsEPA.EPALogtoolForLine;
+import com.embevolter.logtool.impl.logsEPA.ILogtoolForLine;
 import com.embevolter.logtool.model.LogLine;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -59,7 +60,7 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         List<T> logLinesToWrite = new <T>ArrayList();
         try {
             //the EPALogtool implementation is used to read log entries into list
-            logLinesToWrite = (List<T>) this.readProcessor();
+            logLinesToWrite = (List<T>) this.readProcessor(new EPALogtoolForLine());
 
             //the EPALogtool implementation is used to write a list of objects into a JSON file
             this.writeProcessor(logLinesToWrite);
@@ -138,17 +139,23 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
      * @return list of objects to be serialized
      */
     @Override
-    public List<?> readProcessor() {
+    public List<T> readProcessor(ILogtoolForLine<T> lineProcesser) {
         //init captured logLines 
-        List<LogLine> logLinesToWrite = new ArrayList<LogLine>();
+/*         List<LogLine> logLinesToWrite = new ArrayList<LogLine>();
         EPALogtoolForLine lineProc = new EPALogtoolForLine();
+ */
+        List<T> logLinesToWrite = new ArrayList<T>();
 
         try (Scanner sc = initFileScanner() ) {
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
 
+/*                 
                 LogLine l = lineProc.processLine(line);
-                logLinesToWrite.add(l);
+                logLinesToWrite.add(lineProcesser.processLine(line));
+ */             
+                logLinesToWrite.add(
+                    lineProcesser.processLine(line));
             }
 
             // note that Scanner suppresses exceptions

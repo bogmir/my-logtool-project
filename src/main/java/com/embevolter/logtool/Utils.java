@@ -56,7 +56,7 @@ public class Utils {
 
     public static String removeASCIIControlCharactersFromString(String text) {
         return text.replaceAll(
-            EPALogtoolForLine.RegexEnum.ASCII_CONTROL_CHARACTERS.toString(), "");
+            EPALogtoolForLine.LineProcesserRegexEnum.ASCII_CONTROL_CHARACTERS.toString(), "");
     }
 
     public static String capitalize(String str) {

@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
+import com.embevolter.logtool.impl.logsEPA.ILogtoolForLine;
+
 
 /**
 * Interface for LogtoolProcesser implementations
@@ -11,7 +13,7 @@ import java.util.Scanner;
 public interface ILogtoolProcesser<T> {
     String filePath = "";
 
-    public List<?> readProcessor();
+    public List<?> readProcessor(ILogtoolForLine<T> lineProcesser);
     
     public void writeProcessor(List<T> logLine, String outputFileName);
     

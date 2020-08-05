@@ -90,9 +90,9 @@ public class AppInputfileTest implements TestLifecycleLogger {
     void allLinesContainHost() {
         try (Scanner sc = logtool.initFileScanner()) {
             Pattern patternValidIpAddressRegex = Pattern.compile(
-                EPALogtoolForLine.RegexEnum.IP_ADDRESS.toString());
+                EPALogtoolForLine.LineProcesserRegexEnum.IP_ADDRESS.toString());
             Pattern patternValidHostnameRegex = Pattern.compile(
-                EPALogtoolForLine.RegexEnum.HOST.toString());
+                EPALogtoolForLine.LineProcesserRegexEnum.HOST.toString());
 
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
@@ -112,21 +112,21 @@ public class AppInputfileTest implements TestLifecycleLogger {
 
     @Test
     void allLinesContainDatetime() {
-        testMatchingRegexOnEachLine(EPALogtoolForLine.RegexEnum.DATETIME.toString(),
+        testMatchingRegexOnEachLine(EPALogtoolForLine.LineProcesserRegexEnum.DATETIME.toString(),
             "No [dd:hh:mm:ss] in log line!", "All lines contain datetime");
     }
 
     @Disabled("faulty input file must be dealt with")
     @Test
     void allLinesContainProtocol() {
-        testMatchingRegexOnEachLine(EPALogtoolForLine.RegexEnum.PROTOCOL.toString(),
+        testMatchingRegexOnEachLine(EPALogtoolForLine.LineProcesserRegexEnum.PROTOCOL.toString(),
              "No Protocol in log line!", "All lines contain a Protocol");
     }
 
     @Test
     void someLinesDoNotContainProtocol() {
         int counter = 
-            someLinesDoNotContainMatchingSequence(EPALogtoolForLine.RegexEnum.PROTOCOL.toString());
+            someLinesDoNotContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.PROTOCOL.toString());
         
         logger.info("Number of lines that do not contain protocol:" + counter);
         assertNotEquals(counter, 0);
@@ -135,7 +135,7 @@ public class AppInputfileTest implements TestLifecycleLogger {
     @Test
     void someLinesDoNotContainRequestMethod() {
         int counter = 
-            someLinesDoNotContainMatchingSequence(EPALogtoolForLine.RegexEnum.REQUEST_METHOD.toString());
+            someLinesDoNotContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.REQUEST_METHOD.toString());
         
         logger.info("Number of lines that do not contain request method:" + counter);
         assertNotEquals(counter, 0);
@@ -144,32 +144,32 @@ public class AppInputfileTest implements TestLifecycleLogger {
     @Disabled("faulty input file must be dealt with")
     @Test
     void allLinesContainRequestMethod() {
-        testMatchingRegexOnEachLine(EPALogtoolForLine.RegexEnum.REQUEST_METHOD.toString(),
+        testMatchingRegexOnEachLine(EPALogtoolForLine.LineProcesserRegexEnum.REQUEST_METHOD.toString(),
             "No Request Method in log line!", "All lines contain a Request Method");
     }
 
     @Test
     void allLinesContainResponseSize() {
-        testMatchingRegexOnEachLine(EPALogtoolForLine.RegexEnum.RESPONSE_SIZE.toString(),
+        testMatchingRegexOnEachLine(EPALogtoolForLine.LineProcesserRegexEnum.RESPONSE_SIZE.toString(),
              "No Response Size in log line!", "All lines contain Response Size");
     }
 
     @Test
     void allLinesContainResponseStatus() {
-        testMatchingRegexOnEachLine(EPALogtoolForLine.RegexEnum.RESPONSE_STATUS.toString(),
+        testMatchingRegexOnEachLine(EPALogtoolForLine.LineProcesserRegexEnum.RESPONSE_STATUS.toString(),
             "No Response Status in log line!", "All lines contain Response Status");
     }
 
     @Test
     void allLinesContainURLPath() {
-        testMatchingRegexOnEachLine(EPALogtoolForLine.RegexEnum.URL_PATH.toString(), 
+        testMatchingRegexOnEachLine(EPALogtoolForLine.LineProcesserRegexEnum.URL_PATH.toString(), 
             "No URL PATH in log line!", "All lines contain URL PATH");
     }
 
     @Test
     void someLinesContainASCIIControlCharacters() {
         int counter = 
-            someLinesContainMatchingSequence(EPALogtoolForLine.RegexEnum.ASCII_CONTROL_CHARACTERS.toString());
+            someLinesContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.ASCII_CONTROL_CHARACTERS.toString());
 
         logger.info(
             String.format("ASCII control characters in [%s] lines", counter));
@@ -180,7 +180,7 @@ public class AppInputfileTest implements TestLifecycleLogger {
     @Test
     void someLinesContainGetRequests() {
         int counter = 
-            someLinesContainMatchingSequence(EPALogtoolForLine.RegexEnum.GET_REQUEST.toString());
+            someLinesContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.GET_REQUEST.toString());
 
         logger.info("GET requests:" + counter);
         assertEquals(counter, NUMBER_OF_GET_REQUESTS);
@@ -189,7 +189,7 @@ public class AppInputfileTest implements TestLifecycleLogger {
     @Test
     void someLinesContainPostRequests() {
         int counter = 
-            someLinesContainMatchingSequence(EPALogtoolForLine.RegexEnum.POST_REQUEST.toString());
+            someLinesContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.POST_REQUEST.toString());
 
         logger.info("POST requests:" + counter);
         assertEquals(counter, NUMBER_OF_POST_REQUESTS);
@@ -198,7 +198,7 @@ public class AppInputfileTest implements TestLifecycleLogger {
     @Test
     void someLinesContainHeadRequests() {
         int counter = 
-            someLinesContainMatchingSequence(EPALogtoolForLine.RegexEnum.HEAD_REQUEST.toString());
+            someLinesContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.HEAD_REQUEST.toString());
 
         logger.info("HEAD requests:" + counter);
         assertEquals(counter, NUMBER_OF_HEAD_REQUESTS);
@@ -208,7 +208,7 @@ public class AppInputfileTest implements TestLifecycleLogger {
     @Test
     void someLinesContainInvalidRequests() {
         int counter = 
-            someLinesContainMatchingSequence(EPALogtoolForLine.RegexEnum.REQUEST_INVALID.toString());
+            someLinesContainMatchingSequence(EPALogtoolForLine.LineProcesserRegexEnum.REQUEST_INVALID.toString());
         
         logger.info("Invalid requests: " + counter);
         assertEquals(counter, NUMBER_OF_INVALID_REQUESTS);

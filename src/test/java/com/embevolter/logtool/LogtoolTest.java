@@ -69,7 +69,7 @@ class LogtoolTest implements TestLifecycleLogger {
     @Test
     void testReadAllLines() {
         try {
-            logtool.readProcessor();
+            logtool.readProcessor(new EPALogtoolForLine());
         } catch (Exception ex) {
             fail(" READING NOT COMPLETE ");
         }
