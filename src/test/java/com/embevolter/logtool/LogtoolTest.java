@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.function.BiFunction;
 
 import com.embevolter.logtool.impl.LogtoolProcesser;
-import com.embevolter.logtool.impl.logsEPA.EPALogLineProcesser;
+import com.embevolter.logtool.impl.logLineProcess.EPALogLineProcesser;
 import com.embevolter.logtool.model.LogLine;
 
 import org.junit.jupiter.api.BeforeEach;

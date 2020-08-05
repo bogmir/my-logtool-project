@@ -1,4 +1,4 @@
-package com.embevolter.logtool.impl.logsEPA;
+package com.embevolter.logtool.impl.logLineProcess;
 
 import java.util.logging.Logger;
 import java.util.regex.Matcher;

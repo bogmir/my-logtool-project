@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import com.embevolter.logtool.impl.logsEPA.ILogLineProcesser;
+import com.embevolter.logtool.impl.logLineProcess.ILogLineProcesser;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -55,7 +55,7 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
      * Launches read&write processes
      */
     public void launcher(ILogLineProcesser<T> logLineProcesser) {
-        List<T> logLinesToWrite = new <T>ArrayList();
+        List<T> logLinesToWrite = new ArrayList<T>();
         try {
             //the EPALogtool implementation is used to read log entries into list
             logLinesToWrite = (List<T>) this.readProcessor(logLineProcesser);

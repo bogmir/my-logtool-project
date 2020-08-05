@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.embevolter.logtool.impl.LogtoolProcesser;
-import com.embevolter.logtool.impl.logsEPA.EPALogLineProcesser;
+import com.embevolter.logtool.impl.logLineProcess.EPALogLineProcesser;
 import com.embevolter.logtool.model.LogLine;
 
 import org.junit.jupiter.api.BeforeEach;

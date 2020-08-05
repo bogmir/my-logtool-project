@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.embevolter.logtool.impl.logsEPA.ILogLineProcesser;
+import com.embevolter.logtool.impl.logLineProcess.ILogLineProcesser;
 
 
 /**
@@ -13,9 +13,11 @@ import com.embevolter.logtool.impl.logsEPA.ILogLineProcesser;
 public interface ILogtoolProcesser<T> {
     String filePath = "";
 
-    public List<?> readProcessor(ILogLineProcesser<T> lineProcesser);
+    public List<T> readProcessor(ILogLineProcesser<T> lineProcesser);
     
     public void writeProcessor(List<T> logLine, String outputFileName);
     
     public Scanner initFileScanner() throws IllegalArgumentException, IOException;
+
+    public void launcher(ILogLineProcesser<T> logLineProcesser);
 }
