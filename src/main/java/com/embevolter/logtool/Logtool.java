@@ -1,6 +1,7 @@
 package com.embevolter.logtool;
 
 import com.embevolter.logtool.impl.LogtoolProcesser;
+import com.embevolter.logtool.impl.logsEPA.EPALogLineProcesser;
 
 /**
  * Logtool launcher
@@ -24,6 +25,6 @@ public final class Logtool {
         
         LogtoolProcesser logtool = new LogtoolProcesser(args[0]);
 
-        logtool.launcher();
+        logtool.launcher(new EPALogLineProcesser());
     }
 }

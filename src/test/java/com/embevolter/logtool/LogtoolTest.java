@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.function.BiFunction;
 
 import com.embevolter.logtool.impl.LogtoolProcesser;
-import com.embevolter.logtool.impl.logsEPA.EPALogtoolForLine;
+import com.embevolter.logtool.impl.logsEPA.EPALogLineProcesser;
 import com.embevolter.logtool.model.LogLine;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +19,7 @@ import org.junit.jupiter.api.Test;
  */
 class LogtoolTest implements TestLifecycleLogger {
     LogtoolProcesser<LogLine> logtool;
-    EPALogtoolForLine logtoolForLine;
+    EPALogLineProcesser logtoolForLine;
 
     static final String inputFileName = "resources/epa-http.txt";
     static final int NUMBER_OF_LOG_LINES = 47748;
@@ -29,7 +29,7 @@ class LogtoolTest implements TestLifecycleLogger {
     @BeforeEach
     void beforeEach() {
         logtool = new LogtoolProcesser<LogLine>(inputFileName);
-        logtoolForLine = new EPALogtoolForLine();
+        logtoolForLine = new EPALogLineProcesser();
     }
 
     private List<LogLine> readSubsetOfLogLines(int numberOfPropertiesReadPerLine, BiFunction<Integer, Integer, Boolean> operatorFunction) {
@@ -69,7 +69,7 @@ class LogtoolTest implements TestLifecycleLogger {
     @Test
     void testReadAllLines() {
         try {
-            logtool.readProcessor(new EPALogtoolForLine());
+            logtool.readProcessor(new EPALogLineProcesser());
         } catch (Exception ex) {
             fail(" READING NOT COMPLETE ");
         }

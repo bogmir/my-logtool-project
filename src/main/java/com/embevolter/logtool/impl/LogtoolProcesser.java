@@ -9,9 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import com.embevolter.logtool.impl.logsEPA.EPALogtoolForLine;
-import com.embevolter.logtool.impl.logsEPA.ILogtoolForLine;
-import com.embevolter.logtool.model.LogLine;
+import com.embevolter.logtool.impl.logsEPA.ILogLineProcesser;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -56,11 +54,11 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
     /**
      * Launches read&write processes
      */
-    public void launcher() {
+    public void launcher(ILogLineProcesser<T> logLineProcesser) {
         List<T> logLinesToWrite = new <T>ArrayList();
         try {
             //the EPALogtool implementation is used to read log entries into list
-            logLinesToWrite = (List<T>) this.readProcessor(new EPALogtoolForLine());
+            logLinesToWrite = (List<T>) this.readProcessor(logLineProcesser);
 
             //the EPALogtool implementation is used to write a list of objects into a JSON file
             this.writeProcessor(logLinesToWrite);
@@ -71,13 +69,13 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
         }
 
         //give an account of the input file and the transformation 
-        this.processReport((List<LogLine>)logLinesToWrite);
+        this.processReport((List<T>)logLinesToWrite);
     }
 
     /**
      * Report printed after launcher has finished processing
      */
-    void processReport(List<LogLine> logLinesToWrite) {
+    void processReport(List<T> logLinesToWrite) {
         logger.info(String.format("A total of %d lines were processed successfully!", 
             logLinesToWrite.size()));
     }
@@ -139,21 +137,14 @@ public class LogtoolProcesser<T> implements ILogtoolProcesser<T> {
      * @return list of objects to be serialized
      */
     @Override
-    public List<T> readProcessor(ILogtoolForLine<T> lineProcesser) {
+    public List<T> readProcessor(ILogLineProcesser<T> lineProcesser) {
         //init captured logLines 
-/*         List<LogLine> logLinesToWrite = new ArrayList<LogLine>();
-        EPALogtoolForLine lineProc = new EPALogtoolForLine();
- */
         List<T> logLinesToWrite = new ArrayList<T>();
 
         try (Scanner sc = initFileScanner() ) {
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
 
-/*                 
-                LogLine l = lineProc.processLine(line);
-                logLinesToWrite.add(lineProcesser.processLine(line));
- */             
                 logLinesToWrite.add(
                     lineProcesser.processLine(line));
             }

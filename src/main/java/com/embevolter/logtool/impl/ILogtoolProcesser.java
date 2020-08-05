@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.embevolter.logtool.impl.logsEPA.ILogtoolForLine;
+import com.embevolter.logtool.impl.logsEPA.ILogLineProcesser;
 
 
 /**
@@ -13,7 +13,7 @@ import com.embevolter.logtool.impl.logsEPA.ILogtoolForLine;
 public interface ILogtoolProcesser<T> {
     String filePath = "";
 
-    public List<?> readProcessor(ILogtoolForLine<T> lineProcesser);
+    public List<?> readProcessor(ILogLineProcesser<T> lineProcesser);
     
     public void writeProcessor(List<T> logLine, String outputFileName);
     

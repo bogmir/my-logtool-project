@@ -12,15 +12,15 @@ import com.embevolter.logtool.model.ServerRequest;
 /**
 *    Line processing class for the EPA (1995) style logs
 */
-public class EPALogtoolForLine implements ILogtoolForLine{
+public class EPALogLineProcesser implements ILogLineProcesser<LogLine>{
    
-    static final Logger logger = Logger.getLogger(EPALogtoolForLine.class.getName());
+    static final Logger logger = Logger.getLogger(EPALogLineProcesser.class.getName());
     
     
     /**
      * Constructor
     */
-    public EPALogtoolForLine() {
+    public EPALogLineProcesser() {
     }
 
     public static enum LineProcesserRegexEnum {
@@ -33,7 +33,6 @@ public class EPALogtoolForLine implements ILogtoolForLine{
         PROTOCOL("[A-Z]+/\\d+\\.\\d"),
         RESPONSE_STATUS("[\\d]+\\s[\\d-]+$"),
         RESPONSE_SIZE("\\s[\\d-]+$"),
-        ASCII_CONTROL_CHARACTERS("\\p{Cc}"),
         POST_REQUEST("\"POST"),
         HEAD_REQUEST("\"HEAD"),
         GET_REQUEST("\"GET");
@@ -222,7 +221,6 @@ public class EPALogtoolForLine implements ILogtoolForLine{
         String urlSequence = 
             Utils.getArraySubsetToString(serverRequestSequence, urlSequenceStartPosition, urlSequenceEndPosition);
         
-        //TODO: chapuza 
         if (Utils.isNullOrEmpty(protocolSequence)) {
             urlSequence = urlSequence.substring(1);
         }

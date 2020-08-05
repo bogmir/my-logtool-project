@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.embevolter.logtool.impl.LogtoolProcesser;
-import com.embevolter.logtool.impl.logsEPA.EPALogtoolForLine;
+import com.embevolter.logtool.impl.logsEPA.EPALogLineProcesser;
 import com.embevolter.logtool.model.LogLine;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -45,7 +45,7 @@ public class AppOutputfileTest implements TestLifecycleLogger {
         /*
          * read&process all lines of the input file into a result list before each test
          */
-        this.loglines = (List<LogLine>) logtool.readProcessor(new EPALogtoolForLine());
+        this.loglines = (List<LogLine>) logtool.readProcessor(new EPALogLineProcesser());
     }
 
     public boolean containsPropertyWithValue(final List<LogLine> list, final String propertyName, final String value) {

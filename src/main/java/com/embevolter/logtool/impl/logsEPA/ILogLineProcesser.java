@@ -3,7 +3,7 @@ package com.embevolter.logtool.impl.logsEPA;
 /**
 *    
 */
-public interface ILogtoolForLine<T> {
+public interface ILogLineProcesser<T> {
    
     public T processLine(String line);
 
