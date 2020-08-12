@@ -145,7 +145,7 @@ class LogtoolTest implements TestLifecycleLogger {
             fail("The reading of normal lines was not possible!");
         }
 
-        logger.info("The read was successful");
+        logger.info("The read was successful!");
     }
 
 }
