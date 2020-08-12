@@ -13,11 +13,11 @@ import com.embevolter.logtool.impl.logLineProcess.ILogLineProcesser;
 public interface ILogtoolProcesser<T> {
     String filePath = "";
 
-    public List<T> readProcessor(ILogLineProcesser<T> lineProcesser);
+    List<T> readProcessor(ILogLineProcesser<T> lineProcesser);
     
-    public void writeProcessor(List<T> logLine, String outputFileName);
+    void writeProcessor(List<T> logLine, String outputFileName);
     
-    public Scanner initFileScanner() throws IllegalArgumentException, IOException;
+    Scanner initFileScanner() throws IllegalArgumentException, IOException;
 
-    public void launcher(ILogLineProcesser<T> logLineProcesser);
+    void launcher(ILogLineProcesser<T> logLineProcesser);
 }
