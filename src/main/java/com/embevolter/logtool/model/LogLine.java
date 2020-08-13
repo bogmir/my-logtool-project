@@ -1,5 +1,7 @@
 package com.embevolter.logtool.model;
 
+import com.embevolter.logtool.impl.logLineProcess.EPALogLineProcesser;
+
 /**
 *   Class that models part of the data structure from the output JSON file
 */
@@ -68,4 +70,9 @@ public class LogLine {
                 + ", httpAnswerCode=" + httpAnswerCode + ", serverRequest="
                 + serverRequest + "]";
     }    
+
+    public static EPALogLineProcesser getLineProcessor() {
+        return new EPALogLineProcesser();
+    } 
+
 }
