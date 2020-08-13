@@ -1,7 +1,7 @@
 # my-logtool-project
 
 
-## USAGE: java -jar my-logtool-project-1.0.jar resources/epa-http.txt
+## USAGE: java -jar my-logtool-project-1.0-SNAPSHOT.jar resources/epa-http.txt
 
 
 **Log file processing operations**
