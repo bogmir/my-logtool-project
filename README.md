@@ -1,7 +1,7 @@
 # my-logtool-project
 
 
-## USAGE: java -jar my-logtool-project-1.0-SNAPSHOT.jar <PATH_TO_TXT_FILE>
+## USAGE: java -jar my-logtool-project-1.0.jar <PATH_TO_TXT_FILE>
 
 
 **Log file processing operations**
