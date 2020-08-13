@@ -87,6 +87,7 @@
                     <goal>single</goal>
                 </goals>
                 <configuration>
+                  <finalName>my-logtool-project-${project.version}</finalName>
                     <archive>
                     <manifest>
                         <mainClass>
@@ -97,11 +98,11 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
             </execution>
         </executions>
     </plugin>
-
  <!--      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
