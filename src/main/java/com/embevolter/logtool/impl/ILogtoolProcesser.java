@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
+import com.embevolter.logtool.impl.logLineProcess.ILogLineProcesser;
+
 
 /**
 * Interface for LogtoolProcesser implementations
@@ -11,9 +13,11 @@ import java.util.Scanner;
 public interface ILogtoolProcesser<T> {
     String filePath = "";
 
-    public List<?> readProcessor();
+    List<T> readProcessor(ILogLineProcesser<T> lineProcesser);
     
-    public void writeProcessor(List<T> logLine, String outputFileName);
+    void writeProcessor(List<T> logLine, String outputFileName);
     
-    public Scanner initFileScanner() throws IllegalArgumentException, IOException;
+    Scanner initFileScanner() throws IllegalArgumentException, IOException;
+
+    void launcher(ILogLineProcesser<T> logLineProcesser);
 }

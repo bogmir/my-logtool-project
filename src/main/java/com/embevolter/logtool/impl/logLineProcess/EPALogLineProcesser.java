@@ -1,4 +1,4 @@
-package com.embevolter.logtool.impl.logsEPA;
+package com.embevolter.logtool.impl.logLineProcess;
 
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -12,18 +12,18 @@ import com.embevolter.logtool.model.ServerRequest;
 /**
 *    Line processing class for the EPA (1995) style logs
 */
-public class EPALogtoolForLine {
+public class EPALogLineProcesser implements ILogLineProcesser<LogLine>{
    
-    static final Logger logger = Logger.getLogger(EPALogtoolForLine.class.getName());
+    static final Logger logger = Logger.getLogger(EPALogLineProcesser.class.getName());
     
     
     /**
      * Constructor
     */
-    public EPALogtoolForLine() {
+    public EPALogLineProcesser() {
     }
 
-    public static enum RegexEnum {
+    public static enum LineProcesserRegexEnum {
         HOST("(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])"),
         IP_ADDRESS("(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])"),
         DATETIME("\\[\\d{2}:\\d{2}:\\d{2}:\\d{2}\\]"),
@@ -33,7 +33,6 @@ public class EPALogtoolForLine {
         PROTOCOL("[A-Z]+/\\d+\\.\\d"),
         RESPONSE_STATUS("[\\d]+\\s[\\d-]+$"),
         RESPONSE_SIZE("\\s[\\d-]+$"),
-        ASCII_CONTROL_CHARACTERS("\\p{Cc}"),
         POST_REQUEST("\"POST"),
         HEAD_REQUEST("\"HEAD"),
         GET_REQUEST("\"GET");
@@ -41,7 +40,7 @@ public class EPALogtoolForLine {
     
         private String regex;
      
-        RegexEnum(String regex) {
+        LineProcesserRegexEnum(String regex) {
             this.regex = regex;
         }
     
@@ -135,7 +134,7 @@ public class EPALogtoolForLine {
     private String getHttpRequestMethodFromChunk(String[] serverRequestSequence) {
         String firstSequence = serverRequestSequence[0];
 
-        Pattern httpRequestMethodPattern = Pattern.compile(RegexEnum.REQUEST_METHOD.toString());
+        Pattern httpRequestMethodPattern = Pattern.compile(LineProcesserRegexEnum.REQUEST_METHOD.toString());
         Matcher httpRequestMethodMatcher = httpRequestMethodPattern.matcher(firstSequence);
         boolean httpMethodMatcherFound = httpRequestMethodMatcher.find();
 
@@ -156,7 +155,7 @@ public class EPALogtoolForLine {
     private String getProtocolSequenceFromChunk(String[] serverRequestSequence) {
         String lastSequence = serverRequestSequence[serverRequestSequence.length-1];
 
-        Pattern protocolPattern = Pattern.compile(RegexEnum.PROTOCOL.toString());
+        Pattern protocolPattern = Pattern.compile(LineProcesserRegexEnum.PROTOCOL.toString());
         Matcher protocolMatcher = protocolPattern.matcher(lastSequence);
         boolean protocolFound = protocolMatcher.find();
 
@@ -222,7 +221,6 @@ public class EPALogtoolForLine {
         String urlSequence = 
             Utils.getArraySubsetToString(serverRequestSequence, urlSequenceStartPosition, urlSequenceEndPosition);
         
-        //TODO: chapuza 
         if (Utils.isNullOrEmpty(protocolSequence)) {
             urlSequence = urlSequence.substring(1);
         }

@@ -1,6 +1,7 @@
 package com.embevolter.logtool;
 
 import com.embevolter.logtool.impl.LogtoolProcesser;
+import com.embevolter.logtool.model.LogLine;
 
 /**
  * Logtool launcher
@@ -22,8 +23,8 @@ public final class Logtool {
             System.exit(0);
         }
         
-        LogtoolProcesser logtool = new LogtoolProcesser(args[0]);
+        LogtoolProcesser<LogLine> logtool = new LogtoolProcesser<LogLine>(args[0]);
 
-        logtool.launcher();
+        logtool.launcher(LogLine.getLineProcessor());
     }
 }
